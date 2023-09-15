@@ -2,6 +2,7 @@ package com.telegram_bot_animal_shelter.controllers;
 
 import com.telegram_bot_animal_shelter.model.PersonCat;
 import com.telegram_bot_animal_shelter.service.PersonCatService;
+import com.telegram_bot_animal_shelter.service.impl.PersonCatServiceImpl;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,7 @@ class PersonCatControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private PersonCatService personCatService;
+    private PersonCatServiceImpl personCatService;
 
     /**
      * Testing method getById personCat in the controller class
@@ -56,7 +57,7 @@ class PersonCatControllerTest {
     @Test
     void addPersonCat() throws Exception {
         PersonCat personCat = new PersonCat();
-        personCat.setId(null);
+        personCat.setId(1L);
         personCat.setName("Человек");
         JSONObject userObject = new JSONObject();
         userObject.put("id", 1L);
@@ -80,7 +81,7 @@ class PersonCatControllerTest {
     @Test
     void updatePersonCat() throws Exception {
         PersonCat personCat = new PersonCat();
-        personCat.setId(null);
+        personCat.setId(1L);
         personCat.setName("Человек");
         JSONObject userObject = new JSONObject();
         userObject.put("id", 1L);

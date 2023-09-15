@@ -2,6 +2,7 @@ package com.telegram_bot_animal_shelter.controllers;
 
 import com.telegram_bot_animal_shelter.model.Dog;
 import com.telegram_bot_animal_shelter.service.DogService;
+import com.telegram_bot_animal_shelter.service.impl.DogServiceImpl;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,7 @@ public class DogControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private DogService dogService;
+    private DogServiceImpl dogService;
 
     /**
      * Testing method getById dogs in the controller class
